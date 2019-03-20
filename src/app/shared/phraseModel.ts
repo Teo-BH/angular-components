@@ -1,10 +1,3 @@
 export class phraseModel {
-
-    public englishPhrase: string
-    public portuguesePhrase: string
-
-    constructor(englishPhrase: string, portuguesePhrase: string) {
-        this.englishPhrase = englishPhrase
-        this.portuguesePhrase = portuguesePhrase
-    }
+    constructor(public englishPhrase: string, public portuguesePhrase: string) { }
 }
