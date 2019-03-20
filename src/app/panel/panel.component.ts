@@ -43,6 +43,7 @@ export class PanelComponent implements OnInit {
     this.progress = this.progress + (100 / this.phrases.length)
     if (this.index >= this.phrases.length) {
       this.index = 0
+      this.progress = 0
     }
     this.currentPhrase = this.phrases[this.index] 
   }
