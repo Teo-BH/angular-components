@@ -23,6 +23,7 @@ export class PanelComponent implements OnInit {
 
   public progress: number = 0
   public responseText: string = ""
+  public tries: number = 3
 
   public updateText(sender: Event): void {
     this.responseText = (<HTMLInputElement>(sender.target)).value
@@ -35,6 +36,10 @@ export class PanelComponent implements OnInit {
       this.responseText = ""
     } else {
       alert('A tradução está errada')
+      this.tries--
+      if (this.tries == -1) {
+        alert("Você perdeu todas as tentativas")
+      }
     }
   }
 

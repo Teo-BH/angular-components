@@ -1,5 +1,8 @@
 <div class="d-flex justify-content-end">
+    <!--
     <img [src]="hearts[0].showState()">
     <img [src]="hearts[1].showState()">
     <img [src]="hearts[2].showState()">
+    -->
+    <img *ngFor="let heart of hearts" [src]="heart.showState()"/>
 </div>
