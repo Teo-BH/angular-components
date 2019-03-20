@@ -12,4 +12,6 @@ export class TryComponent implements OnInit {
   ngOnInit() {
   }
 
+  public emptyHeart: string = '/assets/empty_heart.png'
+  public fullHeart: string = '/assets/full_heart.png'
 }
