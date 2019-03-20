@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { Phrase } from '../shared/phrase.model';
 import { PHRASES } from './phrase.mock'
 
@@ -25,6 +25,9 @@ export class PanelComponent implements OnInit {
   public responseText: string = ""
   public tries: number = 3
 
+  @Output()
+  public finishApp: EventEmitter<string> = new EventEmitter()
+
   public updateText(sender: Event): void {
     this.responseText = (<HTMLInputElement>(sender.target)).value
   }
@@ -38,7 +41,7 @@ export class PanelComponent implements OnInit {
       alert('A tradução está errada')
       this.tries--
       if (this.tries == -1) {
-        alert("Você perdeu todas as tentativas")
+        this.finishApp.emit("Você perdeu todas as tentativas")
       }
     }
   }
@@ -47,8 +50,7 @@ export class PanelComponent implements OnInit {
     this.index++
     this.progress = this.progress + (100 / this.phrases.length)
     if (this.index >= this.phrases.length) {
-      this.index = 0
-      this.progress = 0
+      this.finishApp.emit("Você conclui as traduções com sucesso!")
     }
     this.currentPhrase = this.phrases[this.index] 
   }
