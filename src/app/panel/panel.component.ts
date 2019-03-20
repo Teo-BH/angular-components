@@ -17,5 +17,6 @@ export class PanelComponent implements OnInit {
   }
 
   public phrases: Phrase[] = PHRASES
+  public title: string = "Traduza a expressão:"
   
 }
