@@ -17,7 +17,7 @@ export class PanelComponent implements OnInit {
 
   public phrases: Phrase[] = PHRASES
   public title: string = "Traduza a expressão:"
-  public responseText: string
+  public responseText: string = ""
 
   public index: number = 0
   public currentPhrase: Phrase
