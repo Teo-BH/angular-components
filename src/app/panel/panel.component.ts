@@ -15,14 +15,14 @@ export class PanelComponent implements OnInit {
 
   ngOnInit() { }
 
-  public phrases: Phrase[] = PHRASES
   public title: string = "Traduza a expressão:"
-  public responseText: string = ""
 
+  public phrases: Phrase[] = PHRASES
   public index: number = 0
   public currentPhrase: Phrase
 
   public progress: number = 0
+  public responseText: string = ""
 
   public updateText(sender: Event): void {
     this.responseText = (<HTMLInputElement>(sender.target)).value
