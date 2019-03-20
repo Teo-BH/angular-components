@@ -1,2 +1,7 @@
 <app-header></app-header>
-<app-panel (finishApp)="finishApp($event)"></app-panel>
+<div *ngIf="inProgress; else gameOver">
+    <app-panel (finishApp)="finishApp($event)"></app-panel>
+</div>
+<ng-template #gameOver>
+    <p>{{ finishAppText }}</p>
+</ng-template>

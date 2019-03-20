@@ -34,11 +34,11 @@ export class PanelComponent implements OnInit {
 
   public checkText(): void {
     if (this.currentPhrase.portuguesePhrase == this.responseText) {
-      alert('A tradução está correta')
+//      alert('A tradução está correta')
       this.nextPhrase()
       this.responseText = ""
     } else {
-      alert('A tradução está errada')
+//      alert('A tradução está errada')
       this.tries--
       if (this.tries == -1) {
         this.finishApp.emit("Você perdeu todas as tentativas")

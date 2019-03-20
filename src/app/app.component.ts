@@ -6,7 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+  public inProgress: boolean = true
+  public finishAppText: string
+
   public finishApp(text: string) {
-    console.log(text)
+    this.finishAppText = text
+    this.inProgress = false
   }
 }
