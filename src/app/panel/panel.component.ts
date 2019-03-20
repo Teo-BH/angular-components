@@ -22,6 +22,8 @@ export class PanelComponent implements OnInit {
   public index: number = 0
   public currentPhrase: Phrase
 
+  public progress: number = 0
+
   public updateText(sender: Event): void {
     this.responseText = (<HTMLInputElement>(sender.target)).value
   }
@@ -33,13 +35,12 @@ export class PanelComponent implements OnInit {
       this.responseText = ""
     } else {
       alert('A tradução está errada')
-  }
-    
-    console.log(this.index)
+    }
   }
 
   private nextPhrase() {
     this.index++
+    this.progress = this.progress + (100 / this.phrases.length)
     if (this.index >= this.phrases.length) {
       this.index = 0
     }
