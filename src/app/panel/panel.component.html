@@ -13,13 +13,13 @@
                 <h6>{{ title }}</h6>
                 <p>{{ phrases[2].englishPhrase }}</p>
                 <div class="form-group">
-                    <textarea class="form-control" rows="3"></textarea>
+                    <textarea class="form-control" rows="3" (input)="updateText($event)"></textarea>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col">
-                <div class="d-flex justify-content-end">.
+                <div class="d-flex justify-content-end">
                         <button type="button" class="btn btn-primary">Verificar</button>
                 </div>
             </div>

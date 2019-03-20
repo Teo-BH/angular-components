@@ -13,10 +13,13 @@ export class PanelComponent implements OnInit {
     console.log(this.phrases)
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
   public phrases: Phrase[] = PHRASES
   public title: string = "Traduza a expressão:"
+
+  public updateText(sender: Event): void {
+    console.log((<HTMLInputElement>(sender.target)).value)
+  }
   
 }
