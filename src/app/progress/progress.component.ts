@@ -8,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ProgressComponent implements OnInit {
 
   @Input()
-  public progressValue: number = 0
+  public progressValue = 0;
 
   constructor() { }
 

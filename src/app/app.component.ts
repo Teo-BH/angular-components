@@ -7,11 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  public inProgress: boolean = true
-  public finishAppText: string
+  public inProgress = true;
+  public finishAppText: string;
 
   public finishApp(text: string) {
-    this.finishAppText = text
-    this.inProgress = false
+    this.finishAppText = text;
+    this.inProgress = false;
   }
 }

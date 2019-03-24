@@ -8,15 +8,15 @@ import { Heart } from '../shared/heart.model';
 })
 export class TryComponent implements OnInit, OnChanges {
 
-  public emptyHeart: string = '/assets/empty_heart.png'
-  public fullHeart: string = '/assets/full_heart.png'
+  public emptyHeart = '/assets/empty_heart.png';
+  public fullHeart = '/assets/full_heart.png';
   public hearts: Heart[] = [
     new Heart(true),
     new Heart(true),
     new Heart(true)
-  ]
+  ];
   @Input()
-  public tryValue: number = 0
+  public tryValue = 0;
 
   constructor() { }
 
@@ -24,8 +24,8 @@ export class TryComponent implements OnInit, OnChanges {
 
   ngOnChanges() {
     if (this.tryValue > 0 && this.tryValue !== this.hearts.length) {
-      let i = this.hearts.length - this.tryValue
-      this.hearts[i - 1].full = false
+      const i = this.hearts.length - this.tryValue;
+      this.hearts[i - 1].full = false;
     }
   }
 }

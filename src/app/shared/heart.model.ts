@@ -7,9 +7,9 @@ export class Heart {
 
     public showState(): string {
         if (this.full) {
-            return this.urlFullHeart
+            return this.urlFullHeart;
         } else {
-            return this.urlEmptyHeart
+            return this.urlEmptyHeart;
         }
     }
 }
